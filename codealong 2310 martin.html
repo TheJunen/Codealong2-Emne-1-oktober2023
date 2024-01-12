@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        let ak = ["Bjarne, Tom, Janne"]
+        updateView();
+        function updateView(){
+            document.getElementById('app').innerHTML = /*HTML*/`
+            <input onchange="addPeopleToList(this.value)">
+            ${ak}
+            `;
+        }
+        function listOfPeople(){
+        }
+        addPeopleToList();
+        function addPeopleToList(newPeople){
+            ak.push(newPeople)
+            updateView()
+        }
+                
+    </script>
+</body>
+</html>
